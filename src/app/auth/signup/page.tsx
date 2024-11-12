@@ -14,10 +14,8 @@ export default function Signup() {
             method: "POST",
             body: formData,
         })
-
+        
         const data = await response.json();
-
-        console.log(data)
     }
 
     return (

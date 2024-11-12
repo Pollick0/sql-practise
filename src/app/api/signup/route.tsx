@@ -16,11 +16,11 @@ export async function POST(req: NextRequest, res: NextResponse) {
     if (!validator.isEmail(email)) {
         return NextResponse.json({ error: "Not a valid email address "}, { status: 400 })
     }
-
+    
     const salt = await bcrypt.genSalt(saltRounds)
     const hash = await bcrypt.hash(password, salt);
 
-    await pool.query("INSERT INTO users (email, password) VALUES (?, ?)", [email, hash]);
+    pool.query("INSERT INTO users (email, password) VALUES (?, ?)", [email, hash]);
 
     return NextResponse.json({ "message": "Signed up successfully" }, { status: 200 })
    } catch(error) {
