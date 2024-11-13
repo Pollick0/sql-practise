@@ -22,14 +22,10 @@ export default function Signup() {
 
         <div>
             <form onSubmit={onSubmit} className="flex flex-col">
-
                 <input type="email" id="email" name="email" className="w-fit text-5 p-1 !outline-none focus:bg-slate-200" ></input> 
                 <input type="password" id="password" name="password" className="w-fit text-5 p-1 !outline-none focus:bg-slate-200"></input>
                 <button type="submit" className="w-fit bg-slate-500 text-white p-2 pr-3 font-bold">Sign Up</button>       
-
             </form>
-
-
         </div>
     )
 

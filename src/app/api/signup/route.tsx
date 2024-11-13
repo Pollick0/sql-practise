@@ -18,9 +18,9 @@ export async function POST(req: NextRequest, res: NextResponse) {
     }
     
     const salt = await bcrypt.genSalt(saltRounds)
-    const hash = await bcrypt.hash(password, salt);
+    const hashedPassword = await bcrypt.hash(password, salt);
 
-    pool.query("INSERT INTO users (email, password) VALUES (?, ?)", [email, hash]);
+    pool.query("INSERT INTO users (email, password) VALUES (?, ?)", [email, hashedPassword]);
 
     return NextResponse.json({ "message": "Signed up successfully" }, { status: 200 })
    } catch(error) {
