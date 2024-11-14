@@ -3,7 +3,6 @@ import { NextRequest, NextResponse } from "next/server";
 const bcrypt = require('bcrypt')
 const validator = require('validator')
 
-
 const saltRounds = 5
 
 export async function POST(req: NextRequest, res: NextResponse) {

@@ -10,7 +10,7 @@ export default function Login() {
         const formData = new FormData(e.currentTarget);
         console.log(formData)
         
-        const response = await fetch("http://localhost:3000/api/signup/", {
+        const response = await fetch("http://localhost:3000/api/login/", {
             method: "POST",
             body: formData,
         })
