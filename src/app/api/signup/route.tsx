@@ -9,6 +9,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
    try {
     const formData = await req.formData();
+    
     const password = formData.get("password");
     const email = formData.get("email");
 

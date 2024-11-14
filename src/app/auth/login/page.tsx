@@ -16,7 +16,7 @@ export default function Login() {
         })
         
         const data = await response.json();
-        console.log("Attempting Log In")
+        console.log("Attempting Log In...")
     }
 
     return (
